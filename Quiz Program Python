@@ -1,0 +1,113 @@
+import random
+class Data:
+    quiz = [
+    {
+        "question": "It is a special format for storing and organizing",
+        "answer": "DATA STRUCTURE"
+    },
+    {
+        "question": "It is used for storing elements where each is a separate object",
+        "answer": "LINKED LIST"
+    },
+    {
+        "question": "This is an ordered list in which the last element added is the first element retrieved or removed (Last-In, First-Out)",
+        "answer": "STACK"
+    },
+    {
+        "question": "It represents a hierarchical nature of a structure in a graphical form",
+        "answer": "TREE"
+    },
+    {
+        "question": "a collection of elements where each element is unique",
+        "answer": "SET"
+    },
+    {
+        "question": "A set of ordered pairs where elements are known as keys (identifiers) and values (content)",
+        "answer": "MAP"
+    },
+    {
+        "question": "This consists of vertices(or nodes) and a set of edges (relations) between the pairs of vetices",
+        "answer": "GRAPH"
+    },
+    {
+        "question": "It is a step-by-step set of instructions to be executed in a sequence for solving a problem",
+        "answer": "ALGORITHM"
+    },
+    {
+        "question": "It is an element of an algorithm that repeats an action multiple times",
+        "answer": "ITERATION"
+    },
+    {
+        "question": "It is an element of an algorithm where a function calls itself once or multiple times to solve a problem",
+        "answer": "RECURSION"
+    },
+    ]
+    quiz2 = [
+    {
+        "question": "(Base case) is the condition that allows the algorithm to stop recurring",
+        "answer": "TRUE"
+    },
+    {
+        "question": "(Direct recursion) occurs when a method invokes another method, eventually resulting in the original method being invoked again",
+        "answer": "INDIRECT RECURSION"
+    },
+    {
+        "question": "(Recursion) is terminated when a condition is proven to be false",
+        "answer": "ITERATION"
+    },
+    {
+        "question": "(Mutual Recursion) is when a fuction works in a pair or a group",
+        "answer": "TRUE"
+    },
+    {
+        "question": "(Binary recursion) is when a function calls itself twice in the run of the function",
+        "answer": "TRUE"
+    }
+    ]
+    
+    def __init__(ask_question):
+        print(ask_question["question"])
+    
+        input_answer = input("Enter your answer: ").upper()
+        
+        if input_answer == ask_question["answer"]:
+            return True
+        else:
+            return False
+        
+    
+    score=0
+    random.shuffle(quiz)
+    for i in range(0, 10):
+        print(f'Question {i+1} of 10')
+        if __init__(quiz[i]):
+            print("Correct!\n")
+            score += 1
+        else:
+            print(f"Incorrect! The correct answer is {quiz[i]['answer']}.\n")
+
+    print(f"You scored {score}/10 in test I.")
+    print(f"Let's move on to Test II: \nModified TrueorFalse: Write True or False. If false, write the correct answer.")
+    
+    score2=0
+    random.shuffle(quiz2)
+    for i in range(0, 5):
+        print(f'Question {i+1} of 5')
+        if __init__(quiz2[i]):
+            print("Correct!\n")
+            score2 += 1
+        else:
+            print(f"Incorrect! The correct answer is {quiz2[i]['answer']}.\n")
+
+    print(f"You scored {score2}/5 in test II.")
+    
+    
+    def test2(ask_question):
+        print(ask_question["question"])
+    
+        input_answer = input("Enter your answer: ").upper()
+        
+        if input_answer == ask_question["answer"]:
+            return True
+        else:
+            return False
